@@ -1,0 +1,12 @@
+<h1>Te voila dans notre club</h1>
+
+
+  <% @user.each do |x|%>
+    <div class="card form-group" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title"><%= x.first_name %></h5>
+    <h6 class="card-title"><%= x.last_name %></h6>
+    <p class="card-text"><%= x.email %></p>
+    </div>
+  </div>
+  <% end %>
