@@ -6,8 +6,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:session][:email].downcase)
-    user_last_name = User.find_by(last_name: params[:session][:last_name].downcase)
+    user = User.find_by(email: params[:session][:email])
+    user_last_name = User.find_by(last_name: params[:session][:last_name])
      if (user == nil || user_last_name == nil)
       flash[:danger] = 'Invalid combination'
       render 'new'

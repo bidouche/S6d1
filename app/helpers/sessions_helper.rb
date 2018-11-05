@@ -1,8 +1,8 @@
 module SessionsHelper
-	# Logs in the given user.
-	def log_in(user)
-		session[:user_id] = user.id
-	end
+  # Logs in the given user.
+  def log_in(user)
+    session[:user_id] = user.id
+  end
 
   # Returns the user corresponding to the remember token cookie.
   def current_user
@@ -17,14 +17,9 @@ module SessionsHelper
     end
   end
 
-	  # Returns true if the user is logged in, false otherwise.
-	def logged_in?
-		!current_user.nil?
-	end
-
-	def log_out
-		session.delete(:user_id)
-		@current_user = nil
+    # Returns true if the user is logged in, false otherwise.
+  def logged_in?
+    !current_user.nil?
   end
 
     # Remembers a user in a persistent session.
