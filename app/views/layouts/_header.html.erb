@@ -1,8 +1,10 @@
-<div class="header">
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-    <%= link_to "Log out", logout_path, class: "btn btn-outline-danger my-2 my-sm-0",method: :delete %>
-	<%= link_to "Viens dans notre club", club_path, class: "btn btn-danger" %>
+		<li><%= link_to "Log out", logout_path, class: "btn btn-danger",method: :delete %></li>
+   		<li><%= link_to "Viens dans notre club", club_path, class: "btn btn-primary" %></li>
+    	<li><%= link_to "accueil", user_path(@current_user), class: "btn btn-primary" %></li>
+	</ul>
+	</div>
 </nav>
-</div>

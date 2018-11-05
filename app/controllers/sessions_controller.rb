@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
 
     def user_authenticated
       if logged_in?
-        redirect_to club_path
+        redirect_to user_path(@current_user)
       end
     end
 end
